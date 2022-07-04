@@ -1,0 +1,19 @@
+.p {
+  margin: 0;
+  padding: 0;
+}
+
+.s {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.m {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.l {
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+}
