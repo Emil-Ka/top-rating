@@ -31,7 +31,7 @@ export const Rating = ({isEditable = false, rating, setRating, className, ...pro
 
   useEffect(() => {
     changeStarArray(rating);
-  }, [rating, changeStarArray]);
+  }, [rating]);
 
   const changeDisplay = (index: number): void => {
     if (!isEditable) {

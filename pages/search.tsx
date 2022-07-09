@@ -1,30 +1,19 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { useState } from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
 import axios from 'axios';
 
-import { Button, Htag, Input, P, Rating, Tag, Textarea } from '../components/index';
-
-import styles from '../styles/Home.module.css';
 import { withLayout } from './../layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
+import { ParsedUrlQuery } from 'node:querystring';
 
-function Home(): JSX.Element {
-  const [rating, setRating] = useState<number>(4);
-  
+function Search(): JSX.Element {
   return (
     <>
-      <Tag color='gray' size='m'>Gray</Tag>
-      <Tag color='purple'>Purple</Tag>
-      <Rating isEditable rating={rating} setRating={setRating}/>
-      <Input placeholder='Имя'/>
-      <Textarea placeholder='Введите текст'/>
+      Search
     </>
   );
 }
 
-export default withLayout(Home);
+export default withLayout(Search);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0;

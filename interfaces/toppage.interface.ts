@@ -54,11 +54,11 @@ export interface TopPageModel {
   metaTitle: string;
   metaDescription: string;
   firstCategory: TopLevelCategories;
-  advantages: TopPageAdvantage[];
+  advantages?: TopPageAdvantage[];
   createdAt: Date;
   updatedAt: Date;
   __v: number;
-  hh: HhData;
+  hh?: HhData;
   qas: any[];
   addresses: any[];
   categoryOn: string;
