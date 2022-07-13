@@ -7,6 +7,7 @@ import { MenuItem } from "../../interfaces/menu.interface";
 import { ProductModel } from "../../interfaces/product.interface";
 import { TopLevelCategories, TopPageModel } from "../../interfaces/toppage.interface";
 import { withLayout } from "../../layout/Layout";
+import { API } from "../../helpers/api"
 
 function TypePage({firstCategory}: TypePageProps): JSX.Element {
   return (
@@ -40,7 +41,7 @@ export const getStaticProps: GetStaticProps<TypePageProps> = async ({params}: Ge
     };
   }
 
-  const {data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+  const {data: menu} = await axios.post<MenuItem[]>(API.topPage.find, {
     firstCategory: firstCategoryItem.id
   });
   //Здесь мы получаем массив со вторыми категориями (дизай, аналитика), а в pages хранятся категории 3-го уровня с самими курсами (Photoshop, Figma)

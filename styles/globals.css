@@ -18,6 +18,8 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -26,6 +28,7 @@ a {
   --primary: #7653FC;
   --primary-hover: #5b37eb; 
   --red: #FC836D;
+  --red-light: #f79a8a;
   --green: #1DC37E;
   --green-light: #C8F8E4;
   --gray: #A4A4A4;

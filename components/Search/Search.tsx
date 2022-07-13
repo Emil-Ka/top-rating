@@ -29,16 +29,17 @@ export const Search = ({className, ...props}: SearchProps): JSX.Element => {
 
   return (
     <div className={cn(styles.search, className)} {...props}>
-      <Input 
+      <Input
         className={styles.input}
         placeholder="Поиск..."
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         onKeyDown={handlerKeyDown}/>
       <Button 
-        className={styles.button} 
+        className={styles.button}
         appearance="primary"
-        onClick={goToSearchPage}>
+        onClick={goToSearchPage}
+      >
         <GlassIcon/>
       </Button>
     </div>

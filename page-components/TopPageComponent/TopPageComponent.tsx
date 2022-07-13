@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
 import { TopPageComponentProps } from "./TopPageComponent.props";
 
 import styles from "./TopPageComponent.module.css";
@@ -14,6 +14,10 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
   const setSort = (sort: SortEnum) => {
     dispatchSort({type: sort});
   }
+
+  useEffect(() => {
+    dispatchSort({type: 'reset', payload: products});
+  }, [products]);
 
   return (
     <div className={styles.wrapper}>
@@ -52,7 +56,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
         <Htag tag='h2'>Получаемые навыки</Htag>
         {
           page.tags.map((tag, index) => (
-            <Tag key={index} color='purple'>{tag}</Tag>
+            <Tag className={styles.tag} key={index} color='purple'>{tag}</Tag>
           ))
         }
       </div>

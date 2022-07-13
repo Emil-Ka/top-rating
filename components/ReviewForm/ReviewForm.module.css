@@ -1,0 +1,106 @@
+.reviewForm {
+  display: grid;
+  grid-template-columns: [start] auto 1fr auto [end];
+  gap: 30px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.textarea {
+  grid-column: start / end;
+}
+
+.submit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-column: start / end;
+}
+
+.nameInput {
+  justify-self: flex-start;
+}
+
+.rating {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.panel {
+  border-radius: 5px;
+  position: relative;
+  padding: 20px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-top: 20px;
+}
+
+.success {
+  background: var(--green-light);
+}
+
+.error {
+  background: var(--red-light);
+}
+
+.error .close path {
+  stroke: var(--red);
+}
+
+.successTitle {
+  font-weight: 700;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .reviewForm {
+    grid-template-columns: [start] auto 1fr [end];
+  }
+}
+
+@media screen and (max-width: 860px) and (min-width: 765px) {
+  .titleInput,
+  .nameInput {
+    grid-column: start / end;
+    justify-self: normal;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .titleInput,
+  .nameInput {
+    justify-self: normal;
+  }
+
+  .info {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .reviewForm {
+    grid-template-columns: [start] 1fr [end];
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .submit {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .info {
+    margin: 0;
+  }
+}

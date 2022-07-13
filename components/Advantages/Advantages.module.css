@@ -10,6 +10,11 @@
 }
 
 .vline {
+  border: none;
   border-left: 1px solid var(--gray-light);
   padding: 0;
+  width: 1px;
+  height: 100%;
+  align-self: center;
+  margin-left: 50%;
 }
