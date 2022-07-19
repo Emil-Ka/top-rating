@@ -1,6 +1,3 @@
-import cn from "classnames";
-import { useEffect, useState, KeyboardEvent } from "react";
-
 import CheckIcon from './check.svg';
 import { AdvantagesProps } from "./Advantages.props";
 

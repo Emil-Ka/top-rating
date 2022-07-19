@@ -34,7 +34,7 @@ export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): J
         setIsError(err.message);
       }
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

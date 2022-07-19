@@ -1,9 +1,6 @@
-import cn from "classnames";
-import { useEffect, useState, KeyboardEvent } from "react";
-
 import { HhCardProps } from "./HhCard.props";
 import StarIcon from "./star.svg";
-import {Card} from "../index"
+import {Card} from "../index";
 
 import styles from "./HhCard.module.css";
 import { priceRu } from "../../helpers/helpers";

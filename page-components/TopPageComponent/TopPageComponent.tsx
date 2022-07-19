@@ -7,9 +7,11 @@ import { TopLevelCategories } from "../../interfaces/toppage.interface";
 import { SortEnum } from "../../components/Sort/Sort.props";
 
 import {sortReducer} from "./sort.reducer"
+import { useScrollY } from "../../hooks/useScrollY";
 
 export const TopPageComponent = ({page, products, firstCategory}: TopPageComponentProps) => {
   const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, {sort: SortEnum.RATING, products});
+  const y = useScrollY();
 
   const setSort = (sort: SortEnum) => {
     dispatchSort({type: sort});
@@ -31,7 +33,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
       <div>
         {
           sortedProducts && sortedProducts.map(product => (
-            <Product key={product._id} product={product}/>
+            <Product layout key={product._id} product={product}/>
           ))
         }
       </div>

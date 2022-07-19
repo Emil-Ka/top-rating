@@ -31,8 +31,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths,
     fallback: true
-  }
-}
+  };
+};
 
 export const getStaticProps: GetStaticProps<TopPageProps> = async ({params}: GetStaticPropsContext<ParsedUrlQuery>) => {
   
@@ -81,7 +81,7 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({params}: Get
       notFound: true
     };
   }
-}
+};
 
 interface TopPageProps extends Record<string, unknown> {
   menu: MenuItem[];

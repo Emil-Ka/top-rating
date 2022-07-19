@@ -1,15 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-import { Button, Htag, Input, P, Rating, Tag, Textarea } from '../components/index';
+import { Input, Rating, Tag, Textarea } from '../components/index';
 import { API } from "../helpers/api";
 import { withLayout } from './../layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
-
-import styles from '../styles/Home.module.css';
 
 function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(4);

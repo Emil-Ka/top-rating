@@ -4,10 +4,8 @@ import { ParsedUrlQuery } from "node:querystring";
 import { firstLevelMenu } from "../../helpers/helpers";
 
 import { MenuItem } from "../../interfaces/menu.interface";
-import { ProductModel } from "../../interfaces/product.interface";
-import { TopLevelCategories, TopPageModel } from "../../interfaces/toppage.interface";
 import { withLayout } from "../../layout/Layout";
-import { API } from "../../helpers/api"
+import { API } from "../../helpers/api";
 
 function TypePage({firstCategory}: TypePageProps): JSX.Element {
   return (
@@ -23,8 +21,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: firstLevelMenu.map(m => `/${m.route}`),
     fallback: true
-  }
-}
+  };
+};
 
 export const getStaticProps: GetStaticProps<TypePageProps> = async ({params}: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {

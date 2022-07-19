@@ -12,7 +12,6 @@
 
 .header {
   grid-area: header;
-  display: none;
 }
 
 .sidebar {
@@ -22,6 +21,7 @@
 
 .body {
   grid-area: body;
+  outline: none;
 }
 
 .footer {
@@ -38,7 +38,7 @@
   }
 }
 
-@media (max-width: 765px) {
+@media screen and (max-width: 800px) {
   .wrapper {
     grid-template-columns: minmax(320px, 1200px);
     grid-template-areas: 
@@ -52,11 +52,25 @@
     display: none !important;
   }
 
-  .header {
-    display: block;
-  }
-
   .body {
     padding: 0 20px;
   }
+}
+
+.skipLink {
+  display: block;
+  padding: 0;
+  background: var(--primary);
+  position: fixed;
+  left: 100px;
+  top: 0;
+  color: var(--white);
+  overflow: hidden;
+  height: 0;
+}
+
+.displayed {
+  overflow: visible;
+  height: auto;
+  padding: 4px;
 }

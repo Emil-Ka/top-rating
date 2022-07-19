@@ -1,8 +1,7 @@
 import cn from "classnames";
-import { useEffect, useState, KeyboardEvent, forwardRef, ForwardedRef } from "react";
+import { forwardRef, ForwardedRef } from "react";
 
 import { CardProps } from "./Card.props";
-import StarIcon from "./star.svg";
 
 import styles from "./Card.module.css";
 
